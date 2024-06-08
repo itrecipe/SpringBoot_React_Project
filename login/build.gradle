@@ -1,0 +1,55 @@
+plugins {
+	id 'java'
+	id 'war'
+	/* 현재 start.spring.io 이니셜라이져를 사용하면 springboot ex)2.x.x 점대 버전들은 지원이 종료되어
+		3버전대만 지원해준다고 한다 (이런 썩을)...
+	   일단 프로젝트 생성해버리고 현재 파일에서 버전 수정 후 리빌드 때려 주자!
+	   현재 그대들이 보는 이 파일은 스프링부트의 의존성주입과 설정 관련을 책임지는 주요 파일임
+	   SpringFramework로 치면 스프링 레거시 mvc 프로젝트에서 pom.xml 이라 보면 될것 같고,
+	   고전 방식이라고 하고 아직까지도 많은 회사들이 사용중이라는 mybatis랑은 다른 gradle 방식을 사용하겠다.
+	   이게 부트를 쓰는 이유 중 하나라고 생각하고 그리고 무엇보다 일단 겁나 편해보이니 난 그래들로 진행 하도록 한다.
+	 */
+
+	id 'org.springframework.boot' version '2.7.17'
+	id 'io.spring.dependency-management' version '1.1.4'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+	sourceCompatibility = '11'
+}
+
+configurations {
+	compileOnly {
+		extendsFrom annotationProcessor
+	}
+}
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	compileOnly 'org.projectlombok:lombok'
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	annotationProcessor 'org.projectlombok:lombok'
+	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.springframework.security:spring-security-test'
+	// spring-boot-configuration-processor
+
+	//application property의 어떠한 속성(설정 정보)을 가져 올때 사용한다.
+	implementation 'org.springframework.boot:spring-boot-configuration-processor'
+
+	// jwt
+	implementation 'io.jsonwebtoken:jjwt-api:0.12.3'
+	runtimeOnly 'io.jsonwebtoken:jjwt-impl:0.12.3'
+	runtimeOnly 'io.jsonwebtoken:jjwt-jackson:0.12.3'
+}
+tasks.named('test') {
+	useJUnitPlatform()
+}
