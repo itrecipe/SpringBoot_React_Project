@@ -78,7 +78,7 @@ public class UserServiceImpl implements UserService {
         // 토큰을 이용한 인증 요청 - 로그인
         Authentication authentication = authenticationManager.authenticate(token); //토큰을 가지고 authenticationManager에 authenticate 메소드로 인증을 요청한다.
 
-        log.info("d인증 여부 : " + authentication.isAuthenticated());
+        log.info("인증 여부 : " + authentication.isAuthenticated());
 
         User authUser = (User) authentication.getPrincipal();
         log.info("인증된 사용자 ID : " + authUser.getUsername());

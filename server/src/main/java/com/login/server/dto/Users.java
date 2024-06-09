@@ -17,7 +17,7 @@ public class Users {
     private String email;
     private Date regDate;
     private Date updDate;
-    private int enabled; //휴면회원 여부
+    private int enabled; //활성화(휴면 회원) 여부
 
     // 권한 목록
     List<UserAuth> authList;
