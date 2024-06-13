@@ -98,7 +98,7 @@ public class UserController {
     */
 
     //admin 권한을 가졌을때만 처리할 수 있도록 하기
-    @Secured("ROLE_ADMIN") // ADMIN 권한 설정
+    @Secured("ROLE_USER") // ADMIN & USER 권한 설정
     @DeleteMapping("/{userId}")
     public ResponseEntity<?> destroy(@PathVariable("userId") String userId) throws Exception {
         log.info("[DELETE] - /users/{userId}");
