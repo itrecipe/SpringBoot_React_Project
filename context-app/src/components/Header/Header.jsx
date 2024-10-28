@@ -11,7 +11,7 @@ const Header = () => {
                 </Link>
             </div>
 
-            <div className="util">
+            <div className="until">
                 {/* 비 로그인시 */}
                 <ul>
                     <li><Link to="/login">로그인</Link></li>
