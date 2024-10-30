@@ -5,7 +5,7 @@ import Header from '../components/header/Header.jsx'
   return (
     <>
     <Header />
-    <div className="containter">
+    <div className="container">
         <h1>Join</h1>
         <hr />
         <h2>회원가입 페이지</h2>

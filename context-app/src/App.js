@@ -8,6 +8,7 @@ import User from "./pages/User";
 import About from "./pages/About";
 import Join from "./pages/Join";
 
+// 라우터로 페이지 설정하기
 function App() {
   return (
     <BrowserRouter>

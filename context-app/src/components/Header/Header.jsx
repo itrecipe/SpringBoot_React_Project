@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom' //링크 가져오기
 import './Header.css'
 
 const Header = () => {
@@ -11,7 +11,7 @@ const Header = () => {
                 </Link>
             </div>
 
-            <div className="until">
+            <div className="util">
                 {/* 비 로그인시 */}
                 <ul>
                     <li><Link to="/login">로그인</Link></li>
