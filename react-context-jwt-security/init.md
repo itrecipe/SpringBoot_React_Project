@@ -18,3 +18,17 @@ npm install js-cookie
 
 npm install sweetalert2
 npm install sweetalert2-react-content
+
+## ------------------------------------
+
+## package.json
+
+npm install
+
+"axios": "^1.6.2",
+"js-cookie": "^3.0.5",
+"react": "^18.2.0",
+"react-dom": "^18.2.0",
+"react-scripts": "5.0.1",
+"sweetalert2": "^11.10.1",
+"sweetalert2-react-content": "^5.0.7",
