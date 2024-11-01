@@ -17,9 +17,10 @@ const LoginContextProvider = ({ children }) => {
 
     useEffect ( () => {
         // 3초 뒤 로그인
-        setTimeout( () => {
-            setLogin(true)
-        }, 3000)
+        
+        // setTimeout( () => {
+        //     setLogin(true)
+        // }, 3000)
     }, [])
 
     return (
